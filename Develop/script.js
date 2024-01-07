@@ -5,10 +5,13 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-
 }
+
+function generatePassword() {
+  return "password";
+}
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
