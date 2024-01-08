@@ -9,9 +9,28 @@ function writePassword() {
 }
 
 function generatePassword() {
-  return "password";
+  var passwordLength;
+
+  do {
+    passwordLength = prompt(
+      "Please choose a password length between 8 and 128 characters"
+    );
+
+  if (passwordLength === null) {
+    return null;
+  }
+
+  } while (
+    isNaN(passwordLength) ||
+    parseInt(passwordLength) < 8 ||
+    parseInt(passwordLength) > 128 ||
+    passwordLength.trim() === ""
+  );
+
+  return "testing"; // You can replace this with your actual password generation logic
 }
 
+function passwordLength() {}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
