@@ -23,7 +23,7 @@ function generatePassword() {
     if (passwordLength === null) {
       return null;
     }
-    
+
   } while (
     isNaN(passwordLength) ||
     parseInt(passwordLength) < 8 ||
@@ -31,10 +31,16 @@ function generatePassword() {
     passwordLength.trim() === ""
   );
 
-  includeUppercase = confirm("Would you like to include capital letters in your password?");
+  includeLowercase = confirm("Would you like to include lower case letters in your password?");
+
+  includeUppercase = confirm("Would you like to include upper case letters in your password?");
+
+  includeSpecialCharacters = confirm("Would you like to include special characters in your password?");
   
   console.log("Password Length: ", passwordLength); //testing
+  console.log("Include Lowercase: ", includeLowercase); //testing
   console.log("Include Uppercase: ", includeUppercase); //testing
+  console.log("Include SpecialCharacters: ", includeSpecialCharacters); //testing
 
   return "testing"; // You can replace this with your actual password generation logic
 }
