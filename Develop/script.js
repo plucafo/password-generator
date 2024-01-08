@@ -8,24 +8,33 @@ function writePassword() {
   passwordText.value = password;
 }
 
+// Generate the password with user choices
 function generatePassword() {
   var passwordLength;
+  var includeLowercase;
+  var includeUppercase;
+  var includeSpecialCharacters;
 
   do {
     passwordLength = prompt(
       "Please choose a password length between 8 and 128 characters"
     );
 
-  if (passwordLength === null) {
-    return null;
-  }
-
+    if (passwordLength === null) {
+      return null;
+    }
+    
   } while (
     isNaN(passwordLength) ||
     parseInt(passwordLength) < 8 ||
     parseInt(passwordLength) > 128 ||
     passwordLength.trim() === ""
   );
+
+  includeUppercase = confirm("Would you like to include capital letters in your password?");
+  
+  console.log("Password Length: ", passwordLength); //testing
+  console.log("Include Uppercase: ", includeUppercase); //testing
 
   return "testing"; // You can replace this with your actual password generation logic
 }
