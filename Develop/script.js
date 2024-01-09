@@ -11,6 +11,7 @@ function writePassword() {
 // Generate the password with user choices
 function generatePassword() {
   var passwordLength;
+  var includeNumbers;
   var includeLowercase;
   var includeUppercase;
   var includeSpecialCharacters;
@@ -31,6 +32,8 @@ function generatePassword() {
     passwordLength.trim() === ""
   );
 
+  includeNumbers = confirm("Would you like to include numbers in your password?");
+
   includeLowercase = confirm("Would you like to include lower case letters in your password?");
 
   includeUppercase = confirm("Would you like to include upper case letters in your password?");
@@ -38,11 +41,12 @@ function generatePassword() {
   includeSpecialCharacters = confirm("Would you like to include special characters in your password?");
   
   console.log("Password Length: ", passwordLength); //testing
+  console.log("Include Lowercase: ", includeNumbers); //testing
   console.log("Include Lowercase: ", includeLowercase); //testing
   console.log("Include Uppercase: ", includeUppercase); //testing
   console.log("Include SpecialCharacters: ", includeSpecialCharacters); //testing
 
-  return "testing"; // You can replace this with your actual password generation logic
+  return "testing"; 
 }
 
 function passwordLength() {}
