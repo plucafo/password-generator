@@ -16,25 +16,43 @@ function generatePassword() {
   var includeUppercase;
   var includeSpecialCharacters;
 
-  do {
-    passwordLength = prompt(
-      "Please choose a password length between 8 and 128 characters"
-    );
+  // do {
+  //   passwordLength = prompt(
+  //     "Please choose a password length between 8 and 128 characters"
+  //   );
 
+  //   if (passwordLength === null) {
+  //     return;
+  //   }
+
+  //   if (parseInt(passwordLength) < 8 || parseInt(passwordLength) > 128 || passwordLength.trim() === "") {
+  //     alert("Your length must be between 8 and 128 characters. Please try again.");
+  //   }
+
+  // } while (
+  //   isNaN(passwordLength) ||
+  //   parseInt(passwordLength) < 8 ||
+  //   parseInt(passwordLength) > 128 ||
+  //   passwordLength.trim() === ""
+  // );
+
+  while (true) {
+    passwordLength = prompt("Please choose a password length between 8 and 128 characters");
+  
     if (passwordLength === null) {
-      return null;
+      // User clicked Cancel
+      alert("Operation cancelled by the user.");
+      return null; // Exit the loop if the user cancels
     }
-
-    if (parseInt(passwordLength) < 8 || parseInt(passwordLength) > 128) {
-      alert("Your length must be between 8 and 128 characters. Please try again.");
+  
+    if (isNaN(passwordLength) || parseInt(passwordLength) < 8 || parseInt(passwordLength) > 128 || passwordLength.trim() === "") {
+      // Valid input, exit the loop
+      // Invalid input, show alert and continue the loop
+      alert("Your length must be a valid number between 8 and 128 characters. Please try again.");
+    } else {
+      break;
     }
-
-  } while (
-    isNaN(passwordLength) ||
-    parseInt(passwordLength) < 8 ||
-    parseInt(passwordLength) > 128 ||
-    passwordLength.trim() === ""
-  );
+  }
 
   includeNumbers = confirm("Would you like to include numbers in your password?");
 
