@@ -25,6 +25,10 @@ function generatePassword() {
       return null;
     }
 
+    if (parseInt(passwordLength) < 8 || parseInt(passwordLength) > 128) {
+      alert("Your length must be between 8 and 128 characters. Please try again.");
+    }
+
   } while (
     isNaN(passwordLength) ||
     parseInt(passwordLength) < 8 ||
