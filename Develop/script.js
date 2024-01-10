@@ -103,7 +103,14 @@ function generatePassword() {
   console.log("Include Uppercase: ", includeUppercase); //testing
   console.log("Include SpecialCharacters: ", includeSpecialCharacters); //testing
 
-  return characterSet;
+  var password = "";
+  for (i = 0; i < passwordLength; i++) {
+    var randomIndex = Math.floor(Math.random() * characterSet.length);
+    password += characterSet[randomIndex];
+  }
+  
+  return "Your randomized password is: " + "\n" + "\n" + password;
+  // return password;
 }
 
 // Add event listener to generate button
