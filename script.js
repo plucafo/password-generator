@@ -74,7 +74,7 @@ function generatePassword() {
 
   // Assigning all possible characters to variables
   var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-  var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var uppercaseChars = "ABCDEFGHIJKLMNPQRSTUVWXYZ";
   var numChars = "1234567890";
   var specialChars = "!@#$%^&*()-=";
 
