@@ -11,6 +11,8 @@ function writePassword() {
 // Generate a random password based on user selections
 function generatePassword() {
   var passwordLength;
+
+  
   var includeNumbers;
   var includeLowercase;
   var includeUppercase;
@@ -21,15 +23,12 @@ function generatePassword() {
   var numChars = "1234567890";
   var specialChars = "!@#$%^&*()-=";
 
-  var characterSet;
+  var characterSet = "";
 
   while (true) {
     passwordLength = prompt(
       "Please choose a password length between 8 and 128 characters"
     );
-    
-    //??? WILL REASSIGNING THIS TO PARSEINT HERE WORK ???
-    // passwordLength = parseInt(passwordLength);
 
     // Checks if user clicks cancel
     if (passwordLength === null) {
@@ -81,7 +80,6 @@ function generatePassword() {
   return "testing";
 }
 
-function passwordLength() {}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
