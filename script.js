@@ -48,21 +48,22 @@ function generatePassword() {
     "Would you like to include numbers in your password?"
   );
 
-  // Prompt user to include lowercase letters
+  // Prompts user to include lowercase letters
   includeLowercase = confirm(
     "Would you like to include lowercase letters in your password?"
   );
 
-  // Prompt user to include uppercase letters
+  // Prompts user to include uppercase letters
   includeUppercase = confirm(
     "Would you like to include uppercase letters in your password?"
   );
 
-  // Prompt user to include special characters
+  // Prompts user to include special characters
   includeSpecialCharacters = confirm(
     "Would you like to include special characters in your password?"
   );
 
+  // Checks that user included at least one selection
   if (
     !includeNumbers &&
     !includeLowercase &&
@@ -72,19 +73,19 @@ function generatePassword() {
     return "You must select at least one type of character to include. Please click 'Generate Password' to try again.";
   }
 
-  // Assigning all possible characters to variables
+  // Assigns all possible characters to variables
   var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
   var uppercaseChars = "ABCDEFGHIJKLMNPQRSTUVWXYZ";
   var numChars = "1234567890";
   var specialChars = "!@#$%^&*()-=";
 
-  // Empty string variable to assign all user selected characters to
-  var characterSet = "";
+  var characterSet = ""; // Empty string var to store selected characters
 
+  // Checks if user included certain character sets and adds them to the characterSet var if true
   if (includeNumbers) {
     characterSet += numChars;
   }
-  
+
   if (includeLowercase) {
     characterSet += lowercaseChars;
   }
@@ -97,22 +98,14 @@ function generatePassword() {
     characterSet += specialChars;
   }
 
-  console.log("Character set: " + characterSet); //testing
-
-  console.log("Password Length: ", passwordLength); //testing
-  console.log("Include Numbers: ", includeNumbers); //testing
-  console.log("Include Lowercase: ", includeLowercase); //testing
-  console.log("Include Uppercase: ", includeUppercase); //testing
-  console.log("Include SpecialCharacters: ", includeSpecialCharacters); //testing
-  
-  var password = ""; //variable to store the randomized results in
   // Iterates through the string of selected characters using a randomIndex
+  var password = "";
   for (i = 0; i < passwordLength; i++) {
     var randomIndex = Math.floor(Math.random() * characterSet.length);
     password += characterSet[randomIndex];
   }
-  
-  return "Your randomized password is: " + "\n" + "\n" + password;
+
+  return "Your randomized password is: " + "\n" + "\n" + password; // Returns the randomized password
 }
 
 // Add event listener to generate button
