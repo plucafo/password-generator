@@ -12,19 +12,6 @@ function writePassword() {
 function generatePassword() {
   var passwordLength;
 
-  
-  var includeNumbers;
-  var includeLowercase;
-  var includeUppercase;
-  var includeSpecialCharacters;
-
-  var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-  var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var numChars = "1234567890";
-  var specialChars = "!@#$%^&*()-=";
-
-  var characterSet = "";
-
   while (true) {
     passwordLength = prompt(
       "Please choose a password length between 8 and 128 characters"
@@ -51,6 +38,11 @@ function generatePassword() {
     }
   }
 
+  var includeNumbers;
+  var includeLowercase;
+  var includeUppercase;
+  var includeSpecialCharacters;
+
   // Prompt user to include numbers
   includeNumbers = confirm(
     "Would you like to include numbers in your password?"
@@ -71,15 +63,48 @@ function generatePassword() {
     "Would you like to include special characters in your password?"
   );
 
+  if (
+    !includeNumbers &&
+    !includeLowercase &&
+    !includeUppercase &&
+    !includeSpecialCharacters
+  ) {
+    return "You must select at least one type of character to include. Please click 'Generate Password' to try again.";
+  }
+
+  var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+  var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var numChars = "1234567890";
+  var specialChars = "!@#$%^&*()-=";
+
+  var characterSet = "";
+
+  if (includeNumbers) {
+    characterSet += numChars;
+  }
+  
+  if (includeLowercase) {
+    characterSet += lowercaseChars;
+  }
+
+  if (includeUppercase) {
+    characterSet += uppercaseChars;
+  }
+
+  if (includeSpecialCharacters) {
+    characterSet += specialChars;
+  }
+
+  console.log("Character set: " + characterSet); //testing
+
   console.log("Password Length: ", passwordLength); //testing
-  console.log("Include Numbers: ",includeNumbers); //testing
+  console.log("Include Numbers: ", includeNumbers); //testing
   console.log("Include Lowercase: ", includeLowercase); //testing
   console.log("Include Uppercase: ", includeUppercase); //testing
   console.log("Include SpecialCharacters: ", includeSpecialCharacters); //testing
 
-  return "testing";
+  return characterSet;
 }
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
