@@ -8,7 +8,7 @@ function writePassword() {
   passwordText.value = password;
 }
 
-// Generate the password with user choices
+// Generate a random password based on user selections
 function generatePassword() {
   var passwordLength;
   var includeNumbers;
@@ -16,10 +16,20 @@ function generatePassword() {
   var includeUppercase;
   var includeSpecialCharacters;
 
+  var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+  var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var numChars = "1234567890";
+  var specialChars = "!@#$%^&*()-=";
+
+  var characterSet;
+
   while (true) {
     passwordLength = prompt(
       "Please choose a password length between 8 and 128 characters"
     );
+    
+    //??? WILL REASSIGNING THIS TO PARSEINT HERE WORK ???
+    // passwordLength = parseInt(passwordLength);
 
     // Checks if user clicks cancel
     if (passwordLength === null) {
@@ -63,7 +73,7 @@ function generatePassword() {
   );
 
   console.log("Password Length: ", passwordLength); //testing
-  console.log("Include Lowercase: ", includeNumbers); //testing
+  console.log("Include Numbers: ",includeNumbers); //testing
   console.log("Include Lowercase: ", includeLowercase); //testing
   console.log("Include Uppercase: ", includeUppercase); //testing
   console.log("Include SpecialCharacters: ", includeSpecialCharacters); //testing
