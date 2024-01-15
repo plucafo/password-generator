@@ -1,100 +1,64 @@
-# 03 JavaScript: Password Generator
+# 🅿🅰🆂🆂🆆🅾🆁🅳 🅶🅴🅽🅴🆁🅰🆃🅾🆁
 
-## Your Task
+A simple JavaScript program that generates random passwords based on user preferences.
 
-This week's Challenge requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
+[![Application Screenshot](./Assets/03-javascript-homework-demo.png)](./Assets/03-javascript-homework-demo.png)
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of password special characters](https://www.owasp.org/index.php/Password_special_characters) from the OWASP Foundation.
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [How to Use](#how-to-use)
+- [Customization](#customization)
+- [Contributing](#contributing)
+- [Authors](#authors)
 
-## User Story
+## Introduction
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+This Password Generator is a web-based tool designed to create randomized passwords. It allows users to customize the length and character sets included in their passwords.
 
-## Acceptance Criteria
+## Features
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+- Generate random passwords with specified length.
+- Customize password content by including or excluding numbers, lowercase and uppercase letters, and special characters.
+- Easy-to-use interface with a single click to generate a new password.
 
-## Mock-Up
+## How to Use
 
-The following image shows the web application's appearance and functionality:
+[Github Repo](https://github.com/plucafo/password-generator)
 
-![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
+1. Open the `index.html` file in your preferred web browser.
+2. Click the "Generate Password" button.
+3. Follow the prompts to customize your password preferences.
+4. View your generated password in the designated area.
 
-## Grading Requirements
+Or you can use the [Live Demo](https://plucafo.github.io/password-generator/)
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+## Customization
 
-This Challenge is graded based on the following criteria: 
+### Password Length
 
-### Technical Acceptance Criteria: 40%
+- Choose a password length between 8 and 128 characters.
 
-* Satisfies all of the preceding acceptance criteria.
+### Character Sets
 
-### Deployment: 32%
+- Include numbers in your password.
+  - "1234567890"
+- Include lowercase letters in your password.
+  - "abcdefghijklmnopqrstuvwxyz"
+- Include uppercase letters in your password.
+  - "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+- Include special characters in your password.
+  - "!@#$%^&*()"
 
-* Application deployed at live URL.
+## Contributing
 
-* Application loads with no errors.
+Contributions are welcome! If you have suggestions, bug reports, or want to add new features, please follow these steps:
 
-* Application GitHub URL submitted.
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make changes and submit a pull request.
 
-* GitHub repository that contains application code.
+## Authors
 
-### Application Quality: 15%
+[plucafo on github](https://github.com/plucafo)
 
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the Challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

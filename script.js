@@ -77,7 +77,7 @@ function generatePassword() {
   var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
   var uppercaseChars = "ABCDEFGHIJKLMNPQRSTUVWXYZ";
   var numChars = "1234567890";
-  var specialChars = "!@#$%^&*()-=";
+  var specialChars = "!@#$%^&*()";
 
   var characterSet = ""; // Empty string var to store selected characters
 
